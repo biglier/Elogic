@@ -1,0 +1,19 @@
+<!--
+/**
+ * slavik_elogic_vedor_edit.xml
+ *
+ * @category  Slavik\Elogic\view\adminhtml\layout;
+ * @package   Slavik\Elogic
+ * @author    Stanislav Lelyuk <lelyuk.stanislav@gmail.com
+ * @copyright 2019 Stanislav Lelyuk
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Slavik\Elogic\Block\Adminhtml\Vendor\Edit"/>
+        </referenceContainer>
+    </body>
+</page>

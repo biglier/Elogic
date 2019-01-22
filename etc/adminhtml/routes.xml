@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * routes.xml
+ *
+ * @category  Slavik\Elogic\etc\adminhtml;
+ * @package   Slavik\Elogic
+ * @author    Stanislav Lelyuk <lelyuk.stanislav@gmail.com
+ * @copyright 2019 Stanislav Lelyuk
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="slavik_elogic" frontName="slavik_elogic">
+            <module name="Slavik_Elogic"/>
+        </route>
+    </router>
+</config>
