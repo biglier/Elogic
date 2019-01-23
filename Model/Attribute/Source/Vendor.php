@@ -53,4 +53,18 @@ class Vendor extends AbstractSource
         return $this->_options;
        // return $vendorNames;
     }
+
+    /**
+     * @param int|string $value
+     * @return bool|string
+     */
+    public function getOptionText($value)
+    {
+        foreach ($this->getAllOptions() as $option) {
+            if ($option['value'] == $value) {
+                return $option['label'];
+            }
+        }
+        return false;
+    }
 }
