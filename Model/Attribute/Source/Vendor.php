@@ -18,13 +18,22 @@ use Slavik\Elogic\Model\ResourceModel\Vendor\Collection;;
 class Vendor extends AbstractSource
 {
     /**
+     * Vendor repository
+     *
      * @var VendorRepository
      */
     protected $vendorRepository;
 
+    /**
+     * Collection factory
+     *
+     * @var CollectionFactory
+     */
     protected $collectionFactory;
 
     /**
+     * Vendor constructor.
+     *
      * @param VendorRepository $vendorRepository
      * @param CollectionFactory $collectionFactory
      */
@@ -54,6 +63,8 @@ class Vendor extends AbstractSource
     }
 
     /**
+     * Get text for options
+     *
      * @param int|string $value
      * @return bool|string
      */

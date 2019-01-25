@@ -17,21 +17,29 @@ use Slavik\Elogic\Model\VendorFactory;
 class Save extends Action
 {
     /**
+     * Vendor Repository
+     *
      * @var \Slavik\Elogic\Model\VendorRepository
      */
     protected $vendorRepository;
 
     /**
+     * Vendor factory
+     *
      * @var \Slavik\Elogic\Model\VendorFactory
      */
     protected $vendorFactory;
 
     /**
+     * Date
+     *
      * @var \Magento\Framework\Stdlib\DateTime\DateTime
      */
     protected $date;
 
     /**
+     * Save constructor.
+     *
      * @param Action\Context $context
      * @param VendorRepository $vendorRepository
      * @param VendorFactory $vendorFactory

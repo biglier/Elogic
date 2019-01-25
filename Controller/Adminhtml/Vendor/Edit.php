@@ -23,23 +23,25 @@ class Edit extends Action
     protected $_coreRegistry = null;
 
     /**
+     * Result page factory
+     *
      * @var \Magento\Framework\View\Result\PageFactory
      */
     protected $_resultPageFactory;
 
     /**
+     * Vendor repository
+     *
      * @var VendorRepository
      */
     protected $vendorRepository;
 
     /**
+     * Vendor factory
+     *
      * @var VendorFactory
      */
     protected $vendorFactory;
-    /**
-     * @var Action\Context
-     */
-    private $context;
 
     /**
      * Edit constructor.

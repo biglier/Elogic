@@ -1,19 +1,24 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: slava
- * Date: 25.01.19
- * Time: 13:11
+ * class Vendor
+ *
+ * @category  Slavik\Elogic\Block\Product\View;
+ * @package   Slavik\Elogic
+ * @author    Stanislav Lelyuk <lelyuk.stanislav@gmail.com>
+ * @copyright 2019 Stanislav Lelyuk
  */
 
 namespace Slavik\Elogic\Block\Product\View;
 
+use Magento\Catalog\Model\Product;
 use Slavik\Elogic\Model\VendorRepository;
 
 class Vendor extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var Product
+     * Product
+     *
+     * @var Magento\Catalog\Model\Product;
      */
     protected $_product = null;
 
@@ -33,6 +38,7 @@ class Vendor extends \Magento\Framework\View\Element\Template
 
     /**
      * Vendor constructor.
+     *
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param array $data
@@ -74,5 +80,17 @@ class Vendor extends \Magento\Framework\View\Element\Template
             $this->_product = $this->_coreRegistry->registry('product');
         }
         return $this->_product;
+    }
+
+    /**
+     * Get vendor description
+     *
+     * @return string
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function getVendorDescription()
+    {
+        $vendor =$this->vendorRepository->getById($this->getProduct()->getElogicVendor());
+        return $vendor->getDescription();
     }
 }

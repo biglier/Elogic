@@ -16,9 +16,19 @@ use Slavik\Elogic\Model\VendorRepository;
 
 class Delete extends Action
 {
-
+    /**
+     * Vendor repository
+     *
+     * @var VendorRepository
+     */
     protected $vendorRepository;
 
+    /**
+     * Delete constructor.
+     *
+     * @param Action\Context $context
+     * @param VendorRepository $vendorRepository
+     */
     public function __construct(
         Action\Context $context,
         VendorRepository $vendorRepository

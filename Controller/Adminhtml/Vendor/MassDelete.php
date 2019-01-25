@@ -31,17 +31,22 @@ class MassDelete extends \Magento\Backend\App\Action
     protected $filter;
 
     /**
+     * Collection factory
+     *
      * @var CollectionFactory
      */
     protected $collectionFactory;
 
     /**
+     * Vendr repository
+     *
      * @var VendorRepository
      */
     protected $vendorRepository;
 
     /**
      * MassDelete constructor.
+     *
      * @param Context $context
      * @param Filter $filter
      * @param CollectionFactory $collectionFactory
@@ -60,6 +65,8 @@ class MassDelete extends \Magento\Backend\App\Action
     }
 
     /**
+     * Execute
+     *
      * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */

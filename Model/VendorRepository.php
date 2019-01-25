@@ -1,13 +1,14 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: slava
- * Date: 15.01.19
- * Time: 20:33
+ * class Vendor
+ *
+ * @category  Slavik\Elogic\Model;
+ * @package   Slavik\Elogic
+ * @author    Stanislav Lelyuk <lelyuk.stanislav@gmail.com>
+ * @copyright 2019 Stanislav Lelyuk
  */
 
 namespace Slavik\Elogic\Model;
-
 
 use Slavik\Elogic\Api\Data\VendorInterface;
 use Slavik\Elogic\Api\VendorRepositoryInterface;
@@ -48,6 +49,7 @@ class VendorRepository implements VendorRepositoryInterface
      * @var Magento\Framework\Api\SearchResultsInterfaceFactory
      */
     protected $searchResultsFactory;
+
     /**
      * VendorRepository constructor.
      * @param VendorFactory $vendorFactory

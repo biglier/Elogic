@@ -69,8 +69,8 @@ class Vendor extends \Magento\Framework\Model\AbstractModel implements VendorInt
     /**
      * Set vendor description
      *
-     * @param $vendorDescpirion
-     * @return  VendorInterface
+     * @param $description
+     * @return VendorInterface|void
      */
     public function setDescription($description)
     {
@@ -110,6 +110,8 @@ class Vendor extends \Magento\Framework\Model\AbstractModel implements VendorInt
 
     /**
      * return Vendor date added
+     *
+     * @return mixed|string
      */
     public function getDateAdded()
     {

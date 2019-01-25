@@ -1,9 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: slava
- * Date: 17.01.19
- * Time: 19:20
+ * class InstallData
+ *
+ * @category  Slavik\Elogic\Setup;
+ * @package   Slavik\Elogic
+ * @author    Stanislav Lelyuk <lelyuk.stanislav@gmail.com>
+ * @copyright 2019 Stanislav Lelyuk
  */
 
 namespace Slavik\Elogic\Setup;
@@ -32,7 +34,7 @@ class InstallData implements InstallDataInterface
         $this->eavSetupFactory = $eavSetupFactory;
     }
     /**
-     * Upgrades data for a module
+     * Upgrades data for the module
      *
      * @param ModuleDataSetupInterface $setup
      * @param ModuleContextInterface $context
@@ -54,7 +56,7 @@ class InstallData implements InstallDataInterface
             'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
             'visible' => true,
             'is_html_allowed_on_front' => true,
-            'visible_on_front' => true,
+            'visible_on_front' => false,
             'option' => [
                 'values' => [],
     ]

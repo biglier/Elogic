@@ -14,12 +14,16 @@ use Magento\Backend\App\Action;
 class NewAction extends Action
 {
     /**
+     * Result forward factory
+     *
      * @var \Magento\Backend\Model\View\Result\Forward
      */
     protected $_resultForwardFactory;
 
     /**
-     * @param \Magento\Backend\App\Action\Context $context
+     * NewAction constructor.
+     *
+     * @param Action\Context $context
      * @param \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
      */
     public function __construct(
