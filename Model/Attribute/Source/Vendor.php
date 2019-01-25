@@ -47,7 +47,7 @@ class Vendor extends AbstractSource
             /** @var \Slavik\Elogic\Model\Vendor $vendor */
             foreach ($vendors->getItems() as $vendor)
             {
-                $this->_options[] = ['label'=>__($vendor->getName()),'value'=>$vendor->getName()];
+                $this->_options[] = ['label'=>__($vendor->getName()),'value'=>$vendor->getId()];
             }
         }
         return $this->_options;

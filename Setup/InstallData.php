@@ -45,7 +45,7 @@ class InstallData implements InstallDataInterface
         $attributeCode="elogic_vendor";
         $eavSetup->addAttribute(ProductAttributeInterface::ENTITY_TYPE_CODE, $attributeCode,[
             'group' => 'General',
-            'type' => 'varchar',
+            'type' => 'int',
             'label' => 'Elogic Vendor',
             'input' => 'select',
             'source' =>  'Slavik\Elogic\Model\Attribute\Source\Vendor',
