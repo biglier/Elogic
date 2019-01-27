@@ -13,8 +13,8 @@
  */
 ?>
 <?php
-$_helper = $this->helper('Magento\Catalog\Helper\Output');
 $_vendorName = $block->getVendorName();
+$_vendorDescription = $block->getVendorDescription();
 ?>
 
-<?php echo( $_vendorName)?>
+<?php echo( "Vendor name: $_vendorName <br> Vendor description: $_vendorDescription")?>

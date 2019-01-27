@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<body>
+    <referenceContainer name="product.info.type">
+        <block class="Slavik\Elogic\Block\Product\View\Vendor"
+               name="product.info.vendor"
+               template="Slavik_Elogic::product/view/vendor.phtml"
+               after="product.info.stock.sku">
+        </block>
+    </referenceContainer>
+</body>
