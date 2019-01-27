@@ -22,6 +22,7 @@ class Vendor extends \Magento\Framework\View\Element\Template
      */
     protected $_product = null;
 
+    protected $_vendor = null;
     /**
      * Core registry
      *
@@ -53,6 +54,8 @@ class Vendor extends \Magento\Framework\View\Element\Template
     {
         $this->vendorRepository = $vendorRepository;
         $this->_coreRegistry = $registry;
+        /** @var \Slavik\Elogic\Model\Vendor $vendor */
+        $this->_vendor =$this->vendorRepository->getById($this->getProduct()->getElogicVendor());
         parent::__construct($context, $data);
     }
 
@@ -64,9 +67,7 @@ class Vendor extends \Magento\Framework\View\Element\Template
      */
     public function getVendorName()
     {
-        /** @var \Slavik\Elogic\Model\Vendor $vendor */
-        $vendor =$this->vendorRepository->getById($this->getProduct()->getElogicVendor());
-        return $vendor->getName();
+        return $this->_vendor->getName();
     }
 
     /**
@@ -90,7 +91,6 @@ class Vendor extends \Magento\Framework\View\Element\Template
      */
     public function getVendorDescription()
     {
-        $vendor =$this->vendorRepository->getById($this->getProduct()->getElogicVendor());
-        return $vendor->getDescription();
+        return $this->_vendor->getDescription();
     }
 }
